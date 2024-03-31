@@ -34,3 +34,36 @@ export const Archived = {
     },
   },
 };
+
+export const Loading = {
+  args: {
+    task: {
+      ...Default.args.task,
+      state: 'TASK_IN_LOADING',
+    },
+  },
+  decorators: [
+    (Story) => (
+      <div style={{ backgroundColor: 'lightblue', padding: '10px' }}>
+        <Story />
+      </div>
+    ),
+  ],
+};
+
+
+export const Empting = {
+  args: {
+    task: {
+      ...Default.args.task,
+      state: 'TASK_IN_EMPTING',
+    },
+  },
+  decorators: [
+    (Story) => (
+      <div style={{ border: '2px dashed red', padding: '15px' }}>
+        <Story />
+      </div>
+    ),
+  ],
+};
